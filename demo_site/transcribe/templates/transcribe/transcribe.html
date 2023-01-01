@@ -1,0 +1,15 @@
+{% extends "transcribe/base.html" %}
+{% block content %}
+<h1 class="mt-5">Transcribe</h1>
+<form action="{% url 'transcribe' %}">
+    <select name="file">
+        {% for file in files %}
+        <option value="{{ file.title }}">{{ file.title }}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" value="Transcribe">
+</form>
+{% if transcription %}
+{{ transcription|safe }}
+{% endif %}
+{% endblock %}

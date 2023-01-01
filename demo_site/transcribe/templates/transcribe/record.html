@@ -1,0 +1,8 @@
+{% extends "transcribe/base.html" %}
+{% block content %}
+<h1 class="mt-5">Record Speech</h1>
+<form action="{% url 'record' %}">
+    <input type="number" name="duration" value="3" required="required">Duration
+    <br><input type="submit" name="recording" value="Start">
+</form>
+{% endblock %}

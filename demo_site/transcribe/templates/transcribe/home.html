@@ -1,0 +1,7 @@
+{% extends "transcribe/base.html" %}
+{% block content %}
+<h1 class="mt-5">Select an Audio Option</h1>
+<br><a href="{% url 'record' %}">Record</a>
+<br><a href="{% url 'play' %}">Play</a>
+<br><a href="{% url 'transcribe' %}">Transcribe</a>
+{% endblock %}
